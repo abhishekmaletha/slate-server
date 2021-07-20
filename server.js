@@ -45,6 +45,10 @@ io.on("connect", (socket) => {
     });
 });
 
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+})
+
 var server_port = process.env.YOUR_PORT || process.env.PORT || 4000;
 http.listen(server_port, () => {
     console.log("Started on : " + server_port);
