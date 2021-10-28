@@ -6,6 +6,8 @@ var io = require("socket.io")(http, {
     },
 });
 // let connections = [];
+let cors = require("cors");
+app.use(cors());
 const {
     userJoin,
     showUsers,
